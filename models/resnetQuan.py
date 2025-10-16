@@ -22,7 +22,7 @@ __all__ = [
 from models.batch_normalization import BatchNorm2d
 
 class quantization(nn.Module):
-    def __init__(self, q=1, s=0, type='n_bits', name='', grad_scaling=False):
+    def __init__(self, q=1, s=2, type='shift', name='', grad_scaling=False):
         super().__init__()
         self.epsilon = 1
         self.q = q

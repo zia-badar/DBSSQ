@@ -36,7 +36,7 @@ from utils.utils import plot_activations
 
 
 if __name__ == '__main__':
-    # model = torch.load('iterations/iter_60/model_epoch_15.model', weights_only=False).cuda()
+    # model = torch.load('iterations/iter_61/model_epoch_15.model', weights_only=False).cuda()
     # # # # #
     # modules = model.named_modules()
     # for name, module in modules:
@@ -72,4 +72,4 @@ if __name__ == '__main__':
                 [True,          True, True, True,           True, True, True,           True, True, True,           True, True,             True,           True,           True],
                 grad_scaling=
                 [True,          True, True, True,           True, True, True,           True, True, True,           True, True,             True,           True,           True],
-                train_output_path=Path('iterations/iter_60/'))
+                train_output_path=Path('iterations/iter_61/'))
