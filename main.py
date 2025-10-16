@@ -36,7 +36,7 @@ from utils.utils import plot_activations
 
 
 if __name__ == '__main__':
-    # model = torch.load('iterations/iter_62/model_epoch_15.model', weights_only=False).cuda()
+    # model = torch.load('iterations/iter_63/model_epoch_15.model', weights_only=False).cuda()
     # # # # #
     # modules = model.named_modules()
     # for name, module in modules:
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     # print(evaluate_imagenet(model, show_tqdm=True))
     # exit(0)
 
-    model = resnet18Quan(weights=ResNet18_Weights.IMAGENET1K_V1, use_activation_quantization=False).cuda()
+    model = resnet18Quan(weights=ResNet18_Weights.IMAGENET1K_V1).cuda()
     modules = model.modules()
     for module in modules:
         with torch.no_grad():
@@ -72,4 +72,4 @@ if __name__ == '__main__':
                 [True,          True, True, True,           True, True, True,           True, True, True,           True, True,             True,           True,           True],
                 grad_scaling=
                 [True,          True, True, True,           True, True, True,           True, True, True,           True, True,             True,           True,           True],
-                train_output_path=Path('iterations/iter_62/'))
+                train_output_path=Path('iterations/iter_63/'))
